@@ -3,7 +3,7 @@ package employees;
 public class Manager extends Employee {
     public int numberOfSubordinates;
 
-    public Manager(String fullName, double salary, int numberOfSubordinates) {
+    public Manager(String fullName, double salary, int numberOfSubordinates, String position) {
         super(fullName, salary);
         this.numberOfSubordinates = numberOfSubordinates;
     }
