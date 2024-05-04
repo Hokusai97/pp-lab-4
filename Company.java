@@ -20,16 +20,12 @@ public class Company {
         }
 
         int subordinatesCount = 0;
-        for (Employee emp : employees) {
-            if (!(emp instanceof Manager)) {
-                subordinatesCount++;
-            }
-        }
-
+        double managerSalary = 7500.0;
         for (Employee emp : employees) {
             if (emp instanceof Manager) {
+                subordinatesCount++;
+                emp.setSalary(managerSalary);
                 ((Manager) emp).setNumberOfSubordinates(subordinatesCount);
-                emp.setSalary(7500.0);
             }
         }
 
